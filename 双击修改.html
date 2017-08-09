@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p style="cursor: pointer;">双击修改</p>
+		<input id="text" style="display: none;"/>
+	</body>
+	
+	<script type="text/javascript">
+		var oP= document.getElementsByTagName("p")[0];
+		
+		oP.ondblclick=function(){
+			var txt=document.getElementById("text");
+			txt.style.display="block";
+			oP.style.display="none";
+			
+			
+			txt.focus();
+			txt.onblur=function(){
+				txt.style.display="none";
+				oP.style.display="block";
+				
+				if(!txt.value) return;
+				oP.innerHTML=text.value;
+			}
+		}
+	</script>
+</html>

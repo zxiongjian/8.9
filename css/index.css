@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+input{
+    border: none;
+}
+body,html{
+    background: #00334b;
+    color: #fff;
+}
+.container{
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 40px 0px;
+}
+.container .title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container .add-task{
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.container .add-task input{
+    display: block;
+    background: #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    height:35px;
+    outline: none;
+    font-size: 16px;
+}
+.container .add-task input:nth-child(1){
+    float: left;
+    width: 84%;
+    margin-right: 1%;
+    text-indent: 15px;
+}
+.container .add-task input:nth-child(2){
+    float: left;
+    width: 14%;
+}
+
+
+/*任务列表*/
+.container .task-list li{
+    width: 100%;
+    background: #fff;
+    color: #3a3a3a;
+    height: 37px;
+    line-height: 37px;
+    border-radius: 2px;
+    margin-bottom: 3px;
+    position: relative;
+}
+.container .task-list li .complate{
+    float: left;
+    margin-top: 13px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.container .task-list li .content{
+    float: left;
+    font-size: 16px;
+
+}
+.container .task-list li .right{
+    float: right;
+    margin-right: 10px;
+}
+.container .task-list li .right span{
+    cursor: pointer;
+    color: #999;
+    font-size: 14px;
+}
+
+
+/*详细信息*/
+.task-detail {
+    background: #fff;
+    overflow: auto;
+    color: #333;
+    width:300px;
+    height: 322px;
+    padding: 10px;
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+    position: absolute;
+}
+.task-detail .colse{
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.task-detail .colse:hover{
+    color: red;
+}
+.task-detail .content {
+    font-weight: 900;
+    cursor: pointer;
+}
+.task-detail .input-item{
+    margin-bottom: 20px;
+}
+.task-detail .datetime{
+    height: 30px;
+    margin-top: 10px;
+}
+textarea {
+    min-height: 100px;
+    border:none;
+    resize: none;
+}
+textarea, input[type=text], input[type=date] {
+    width: 100%;
+    display: block;
+    background: #ddd;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+}
+.task-detail button{
+    float: left;
+    background: #46b1e4;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    width: 106px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.task-detail textarea{
+    margin-top: 10px;
+}
+
+.task-detail-mask{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(30, 30, 30, .6);
+}
+.task-item.completed{
+    opacity: 0.4;
+}
+.container .up-task .db-content{
+    height:30px;
+    display: none;
+}
